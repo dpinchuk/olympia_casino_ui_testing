@@ -1,3 +1,4 @@
+import 'cypress-plugin-tab';
 import '../../support/commands';
 import {signUpComponent} from '../../page-objects/signUpPage/components/signUp.component';
 import {emailService} from '../../configs/endpoints.config';
@@ -51,7 +52,7 @@ const signUpSteps = {
     },
     enterBirthYear() {
         cy.generateString('year').then(year => {
-            return signUpComponent.signUpBirthYear().type(year);
+            return signUpComponent.signUpBirthYear().type(year).tab();
         })
     },
 };

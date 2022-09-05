@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker';
+import {faker} from '@faker-js/faker';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -20,8 +20,8 @@ Cypress.Commands.add('getEmail', (url, method, responseKey) => {
     })
         .as('getEmailFromService')
         .then(response => {
-            // expect(response).property('status').to.equal(200);
-            // expect(response.body).property(responseKey).to.not.be.oneOf([null, ""]);
+            expect(response).property('status').to.equal(200);
+            expect(response.body).property(responseKey).to.not.be.oneOf([null, ""]);
             const respBody = response.body;
             return respBody[responseKey];
         });
@@ -50,8 +50,12 @@ Cypress.Commands.add('generateString', (type) => {
         const index = Math.floor(Math.random() * (max - min + 1)) + min;
         return index.toString();
     } else if (type === 'year') {
+        const adultAge = 16;
+        const singleYear = 31536000000;
+        const currentTime = Date.now();
+
         let min = 1970;
-        let max = 2007;
+        let max = min + Math.floor((currentTime - adultAge * singleYear) / singleYear);
         const index = Math.floor(Math.random() * (max - min + 1)) + min;
         return index.toString();
     }
