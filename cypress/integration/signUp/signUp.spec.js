@@ -11,10 +11,10 @@ describe('Sign up a new user account', () => {
         signUpSteps.clickNext();
         signUpSteps.enterFirstName();
         signUpSteps.enterLastName();
-        signUpSteps.enterMobilePhoneNumber();
         signUpSteps.enterBirthDay();
         signUpSteps.enterBirthMonth();
         signUpSteps.enterBirthYear();
+        signUpSteps.enterMobilePhoneNumber();
         signUpSteps.clickNext();
         //expect...
     });

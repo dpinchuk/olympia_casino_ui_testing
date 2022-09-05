@@ -52,7 +52,7 @@ const signUpSteps = {
     },
     enterBirthYear() {
         cy.generateString('year').then(year => {
-            return signUpComponent.signUpBirthYear().type(year).tab();
+            return signUpComponent.signUpBirthYear().type(year);
         })
     },
 };
