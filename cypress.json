@@ -1,0 +1,10 @@
+{
+  "watchForFileChanges": false,
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "retries": 0,
+  "defaultCommandTimeout": 8000,
+  "video": false,
+  "screenshotOnRunFailure": true,
+  "chromeWebSecurity": false
+}
