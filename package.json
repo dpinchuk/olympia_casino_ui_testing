@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.7.0",
+    "@faker-js/faker": "^7.5.0",
     "@testing-library/cypress": "^8.0.3",
+    "cypress": "^9.7.0",
+    "cypress-iframe": "^1.0.1",
     "cypress-xpath": "^1.6.2",
-    "cypress-iframe": "^1.0.1"
+    "faker": "^6.6.6"
   }
 }

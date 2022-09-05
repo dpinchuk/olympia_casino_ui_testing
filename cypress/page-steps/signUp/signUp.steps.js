@@ -11,7 +11,7 @@ const signUpSteps = {
     enterPassword() {
         cy.generatePassword().then(password => {
             return signUpComponent.signUpPassword().type(password);
-        })
+        });
     },
     selectCurrency(currency) {
         signUpComponent.signUpCurrency().click();
@@ -23,6 +23,36 @@ const signUpSteps = {
     },
     clickNext() {
         return signUpComponent.signUpNext().click();
+    },
+    enterFirstName() {
+        cy.generateString('firstName').then(firstName => {
+            return signUpComponent.signUpFirstName().type(firstName);
+        });
+    },
+    enterLastName() {
+        cy.generateString('lastName').then(lastName => {
+            return signUpComponent.signUpLastName().type(lastName);
+        });
+    },
+    enterMobilePhoneNumber() {
+        cy.generateString('mobileNumber').then(mobileNumber => {
+            return signUpComponent.signUpMobilePhoneNumber().type(mobileNumber);
+        });
+    },
+    enterBirthDay() {
+        cy.generateString('day').then(day => {
+            return signUpComponent.signUpBirthDay().type(day);
+        });
+    },
+    enterBirthMonth() {
+        cy.generateString('month').then(month => {
+            return signUpComponent.signUpBirthMonth().type(month);
+        });
+    },
+    enterBirthYear() {
+        cy.generateString('year').then(year => {
+            return signUpComponent.signUpBirthYear().type(year);
+        })
     },
 };
 

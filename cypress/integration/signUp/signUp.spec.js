@@ -9,5 +9,11 @@ describe('Sign up a new user account', () => {
         signUpSteps.enterPassword();
         signUpSteps.selectCurrency('AUD');
         signUpSteps.clickNext();
+        signUpSteps.enterFirstName();
+        signUpSteps.enterLastName();
+        signUpSteps.enterMobilePhoneNumber();
+        signUpSteps.enterBirthDay();
+        signUpSteps.enterBirthMonth();
+        signUpSteps.enterBirthYear();
     });
 })
