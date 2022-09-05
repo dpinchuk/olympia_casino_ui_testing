@@ -15,5 +15,7 @@ describe('Sign up a new user account', () => {
         signUpSteps.enterBirthDay();
         signUpSteps.enterBirthMonth();
         signUpSteps.enterBirthYear();
+        //signUpSteps.clickNext();
+        //expect...
     });
 })
