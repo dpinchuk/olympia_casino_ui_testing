@@ -8,4 +8,4 @@ describe('Sign up a new user account', () => {
         cy.signUp('AUD', '+1', 'Turkey', true, true, true);
         //Click SIGN_UP...;
     });
-})
+});
