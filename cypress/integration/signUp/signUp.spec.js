@@ -6,6 +6,6 @@ describe('Sign up a new user account', () => {
         homeSteps.openHomePage();
         homeSteps.clickSignUpButton();
         cy.signUp('AUD', '+1', 'Turkey', true, true, true);
-        //Click SIGN_UP...
+        //Click SIGN_UP...;
     });
 })

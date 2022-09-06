@@ -63,7 +63,7 @@ const signUpSteps = {
     enterBirthYear() {
         cy.generateString('year').then(year => {
             return signUpComponent.signUpBirthYear().type(year);
-        })
+        });
     },
     selectCountry(country) {
         signUpComponent.signUpSelectCountry().click();
@@ -93,21 +93,21 @@ const signUpSteps = {
             return signUpComponent.signUpCheckboxReceivePromos().click();
         })() : (() => {
             return 0
-        })
+        });
     },
     clickReceiveSmsPromos(bool) {
         return (bool) ? (() => {
             return signUpComponent.signUpCheckboxReceiveSmsPromos().click();
         })() : (() => {
             return 0
-        })
+        });
     },
     clickTermsAcceptance(bool) {
         return (bool) ? (() => {
             return signUpComponent.signUpCheckboxTermsAcceptance().click();
         })() : (() => {
             return 0
-        })
+        });
     },
 };
 

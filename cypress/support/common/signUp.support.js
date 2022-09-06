@@ -21,4 +21,4 @@ Cypress.Commands.add('signUp', (currency, mobilePhoneCode, country, isReceivePro
     signUpSteps.clickReceivePromos(isReceivePromos);
     signUpSteps.clickReceiveSmsPromos(isReceiveSmsPromos);
     signUpSteps.clickTermsAcceptance(isTermsAcceptance);
-})
+});
