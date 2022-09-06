@@ -53,11 +53,16 @@ Cypress.Commands.add('generateString', (type) => {
         const adultAge = 16;
         const singleYear = 31536000000;
         const currentTime = Date.now();
-
         let min = 1970;
         let max = min + Math.floor((currentTime - adultAge * singleYear) / singleYear);
         const index = Math.floor(Math.random() * (max - min + 1)) + min;
         return index.toString();
+    } else if (type === 'city') {
+        return faker.address.city();
+    } else if (type === 'address') {
+        return faker.address.streetAddress();
+    } else if (type === 'postal_code') {
+        return faker.address.zipCode();
     }
 });
 

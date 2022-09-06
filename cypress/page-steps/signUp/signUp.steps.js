@@ -16,7 +16,7 @@ const signUpSteps = {
     },
     selectCurrency(currency) {
         signUpComponent.signUpCurrency().click();
-        signUpComponent.signUpCurrencyItems().each(($element, index, list) => {
+        signUpComponent.signUpCurrencyItems().each(($element) => {
             if ($element.text() === currency) {
                 cy.get($element).click();
             }
@@ -33,6 +33,16 @@ const signUpSteps = {
     enterLastName() {
         cy.generateString('lastName').then(lastName => {
             return signUpComponent.signUpLastName().type(lastName);
+        });
+    },
+    selectMobilePhoneCode(code) {
+        signUpComponent.signUpMobilePhoneCode().click();
+        signUpComponent.signUpMobilePhoneCodeItems().each(($element) => {
+            cy.get($element).children().each($item => {
+                if ($item.text() === code) {
+                    cy.get($item).click();
+                }
+            });
         });
     },
     enterMobilePhoneNumber() {
@@ -53,6 +63,50 @@ const signUpSteps = {
     enterBirthYear() {
         cy.generateString('year').then(year => {
             return signUpComponent.signUpBirthYear().type(year);
+        })
+    },
+    selectCountry(country) {
+        signUpComponent.signUpSelectCountry().click();
+        signUpComponent.signUpSelectCountryItems().each(($element) => {
+            if ($element.text() === country) {
+                cy.get($element).click();
+            }
+        });
+    },
+    enterCity() {
+        cy.generateString('city').then(city => {
+            return signUpComponent.signUpEnterCity().type(city);
+        });
+    },
+    enterAddress() {
+        cy.generateString('address').then(address => {
+            return signUpComponent.signUpEnterAddress().type(address);
+        });
+    },
+    enterPostalCode() {
+        cy.generateString('postal_code').then(postal_code => {
+            return signUpComponent.signUpEnterPostalCode().type(postal_code);
+        });
+    },
+    clickReceivePromos(bool) {
+        return (bool) ? (() => {
+            return signUpComponent.signUpCheckboxReceivePromos().click();
+        })() : (() => {
+            return 0
+        })
+    },
+    clickReceiveSmsPromos(bool) {
+        return (bool) ? (() => {
+            return signUpComponent.signUpCheckboxReceiveSmsPromos().click();
+        })() : (() => {
+            return 0
+        })
+    },
+    clickTermsAcceptance(bool) {
+        return (bool) ? (() => {
+            return signUpComponent.signUpCheckboxTermsAcceptance().click();
+        })() : (() => {
+            return 0
         })
     },
 };

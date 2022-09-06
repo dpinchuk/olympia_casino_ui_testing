@@ -13,7 +13,16 @@ const BIRTH_DAY_INPUT = 'input[name="date_of_birth_day"]';
 const BIRTH_MONTH_INPUT = 'input[name="date_of_birth_month"]';
 const BIRTH_YEAR_INPUT = 'input[name="date_of_birth_year"]';
 const MOBILE_PHONE_CODE_INPUT = '#mobile_phone-code';
+const MOBILE_PHONE_CODE_ITEMS_INPUT = '.select-with-country-icons__dropdown';
 const MOBILE_PHONE_NUMBER_INPUT = '#mobile_phone-number';
+const SELECT_COUNTRY_INPUT = '#country';
+const SELECT_COUNTRY_ITEMS_INPUT = '.select__option.option';
+const ENTER_CITY_INPUT = '#city';
+const ENTER_ADDRESS_INPUT = '#address';
+const ENTER_POSTAL_CODE_INPUT = '#postal_code';
+const CHECKBOX_RECEIVE_PROMOS_INPUT = 'label[for="receive_promos"]';
+const CHECKBOX_RECEIVE_SMS_PROMOS_INPUT = 'label[for="receive_sms_promos"]';
+const CHECKBOX_TERMS_ACCEPTANCE_INPUT = 'label[for="age_terms_acceptance"]';
 
 const signUpComponent = {
     itself() {
@@ -56,8 +65,35 @@ const signUpComponent = {
     signUpMobilePhoneCode() {
         return this.itself().get(MOBILE_PHONE_CODE_INPUT);
     },
+    signUpMobilePhoneCodeItems() {
+        return this.itself().get(MOBILE_PHONE_CODE_ITEMS_INPUT);
+    },
     signUpMobilePhoneNumber() {
         return this.itself().get(MOBILE_PHONE_NUMBER_INPUT);
+    },
+    signUpSelectCountry() {
+        return this.itself().get(SELECT_COUNTRY_INPUT);
+    },
+    signUpSelectCountryItems() {
+        return this.itself().get(SELECT_COUNTRY_ITEMS_INPUT);
+    },
+    signUpEnterCity() {
+        return this.itself().get(ENTER_CITY_INPUT);
+    },
+    signUpEnterAddress() {
+        return this.itself().get(ENTER_ADDRESS_INPUT);
+    },
+    signUpEnterPostalCode() {
+        return this.itself().get(ENTER_POSTAL_CODE_INPUT);
+    },
+    signUpCheckboxReceivePromos() {
+        return this.itself().get(CHECKBOX_RECEIVE_PROMOS_INPUT);
+    },
+    signUpCheckboxReceiveSmsPromos() {
+        return this.itself().get(CHECKBOX_RECEIVE_SMS_PROMOS_INPUT);
+    },
+    signUpCheckboxTermsAcceptance() {
+        return this.itself().get(CHECKBOX_TERMS_ACCEPTANCE_INPUT);
     }
 }
 

@@ -14,8 +14,16 @@ describe('Sign up a new user account', () => {
         signUpSteps.enterBirthDay();
         signUpSteps.enterBirthMonth();
         signUpSteps.enterBirthYear();
+        signUpSteps.selectMobilePhoneCode('+1');
         signUpSteps.enterMobilePhoneNumber();
         signUpSteps.clickNext();
-        //expect...
+        signUpSteps.selectCountry('Turkey')
+        signUpSteps.enterCity();
+        signUpSteps.enterAddress();
+        signUpSteps.enterPostalCode();
+        signUpSteps.clickReceivePromos(true);
+        signUpSteps.clickReceiveSmsPromos(true);
+        signUpSteps.clickTermsAcceptance(true);
+        //SIGN_UP...
     });
 })
